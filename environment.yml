@@ -1,0 +1,36 @@
+# Single environment for all examples (2D_robot, Manipulator, driving).
+# Pins are those of the conda environment in which all documented commands were
+# verified (Python 3.9, PyTorch 2.8.0 + CUDA 12.8, RTX 5090).
+# Install a PyTorch build matching your CUDA driver if cu128 does not fit your machine.
+# The driving example also needs a system `ffmpeg` binary and EGL for headless
+# rendering (PYOPENGL_PLATFORM=egl).
+#
+#   conda env create -f environment.yml
+#   conda activate posafenet
+name: posafenet
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - --extra-index-url https://download.pytorch.org/whl/cu128
+    - torch==2.8.0
+    - torchvision==0.23.0
+    - pytorch-lightning==1.5.8   # run.py uses Trainer.add_argparse_args (removed in PL >= 2.0)
+    - torchmetrics==1.8.2
+    - setuptools<81              # PL 1.5.8 imports pkg_resources
+    - tensorboard==2.20.0
+    - numpy==1.26.4
+    - scipy==1.13.1
+    - pandas==1.3.5
+    - matplotlib==3.5.1
+    - opencv-python==4.5.2.54
+    - h5py==3.1.0
+    - shapely==1.7.1
+    - descartes==1.1.0
+    - ffio==0.1.0
+    - pyrender==0.1.45
+    - PyOpenGL==3.1.0
+    - trimesh==4.10.1
+    - scikit-video==1.1.11
+    - qpth==0.0.18
+    - cvxopt==1.3.2
