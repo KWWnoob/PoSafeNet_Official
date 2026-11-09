@@ -1,6 +1,10 @@
 # PoSafeNet
 
-<!-- TODO(authors): [Paper](...)  [arXiv](...) -->
+[arXiv](https://arxiv.org/abs/2601.22356)
+
+**PoSafeNet: Safe Learning with Poset-Structured Neural Nets**
+
+Kiwan Wong, Wei Xiao, Daniela Rus
 
 Implementation of our PoSafeNet paper (NeurIPS 2026).
 
@@ -151,5 +155,10 @@ The example pipelines are adapted from
 # Reference
 If you find this helpful, please cite our work:
 ```
-TODO(authors): BibTeX for PoSafeNet (NeurIPS 2026)
+@article{wong2026posafenet,
+  title   = {PoSafeNet: Safe Learning with Poset-Structured Neural Nets},
+  author  = {Wong, Kiwan and Xiao, Wei and Rus, Daniela},
+  journal = {arXiv preprint arXiv:2601.22356},
+  year    = {2026}
+}
 ```
