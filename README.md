@@ -152,6 +152,11 @@ The example pipelines are adapted from
 [BarrierNet](https://github.com/Weixy21/BarrierNet) and
 [VISTA](https://github.com/vista-simulator/vista).
 
+# License
+This project is released under the [MIT License](LICENSE). It includes a
+modified copy of VISTA and code adapted from BarrierNet, both MIT-licensed; see
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
 # Reference
 If you find this helpful, please cite our work:
 ```

@@ -1,6 +1,5 @@
 import math
 import torch.nn as nn
-from cvxopt import solvers, matrix
 
 def build_cnn(filters, dropout=0., with_bn=True, with_gn=False,
               no_act_last_layer=False, activation='relu'):
@@ -60,16 +59,3 @@ def build_mlp(filters, dropout=0., with_output_norm = False, with_bn=True,
     modules = nn.Sequential(*modules)
 
     return modules
-
-
-def cvx_solver(Q, p, G, h):
-    mat_Q = matrix(Q.cpu().numpy())
-    mat_p = matrix(p.cpu().numpy())
-    mat_G = matrix(G.cpu().numpy())
-    mat_h = matrix(h.cpu().numpy())
-
-    solvers.options['show_progress'] = False
-
-    sol = solvers.qp(mat_Q, mat_p, mat_G, mat_h)
-
-    return sol['x']
